@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Vansbroappen</string>
+    <string name="km_per_h">km/h</string>
+    <string name="length">Length</string>
+    <string name="start">Starters</string>
+    <string name="finishers">Finishers</string>
+    <string name="meter">m</string>
+    <string name="result">Result</string>
+    <string name="no_hits">No hits</string>
+    <string name="overview">Overview</string>
+    <string name="hint">John Smith</string>
+    <string name="add_to_widget">Add to Widget</string>
+    <string name="top_three">Top three</string>
+    <string name="difference">Difference</string>
+    <string name="kmh_chart_description">Difference in km/h compared to the top three average</string>
+
+    <!--AdMod ad unit ID-->
+    <string name="homescreen_banner_ad">ca-app-pub-2981771375507173/3841216440</string>
+
+</resources>

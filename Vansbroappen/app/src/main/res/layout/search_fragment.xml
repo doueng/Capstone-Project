@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/container"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.douglas.vansbroappen.MainActivity"
+    >
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="@string/app_name"
+            android:textColor="#fdf7ef"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <EditText
+        android:id="@+id/edit_text_main"
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_bar_search"
+        android:hint="@string/hint"
+        android:imeOptions="actionSearch"
+        android:inputType="textPersonName"
+        android:padding="8dp"
+        android:textSize="24sp"
+        />
+
+    <Button
+        android:id="@+id/add_to_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/app_bar_search"
+        android:text="@string/add_to_widget"
+        />
+
+
+    <TextView
+        android:id="@+id/overview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_text_main"
+        android:clickable="true"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:text="@string/overview"
+        android:textSize="24sp"
+        />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/overview"
+        android:layout_marginTop="12dp"
+        android:padding="8dp"
+        >
+
+    </ListView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/homescreen_banner_ad"
+        >
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

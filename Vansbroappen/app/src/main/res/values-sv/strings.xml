@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Vansbroappen</string>
+    <string name="km_per_h">km/h</string>
+    <string name="length">Längd</string>
+    <string name="start">Startande</string>
+    <string name="finishers">I mål</string>
+    <string name="meter">m</string>
+    <string name="result">Resultat</string>
+    <string name="no_hits">Inga träffar</string>
+    <string name="overview">Översikt</string>
+    <string name="hint">Förnamn Efternamn</string>
+    <string name="add_to_widget">Lägg till i Widget</string>
+    <string name="top_three">Top Tre</string>
+    <string name="difference">Skillnad</string>
+    <string name="kmh_chart_description">Skillnad i km/h jämfört med medelhastigheten av de tre snabbaste simmarna</string>
+
+    <!--AdMod ad unit ID-->
+    <string name="homescreen_banner_ad">ca-app-pub-2981771375507173/3841216440</string>
+
+</resources>

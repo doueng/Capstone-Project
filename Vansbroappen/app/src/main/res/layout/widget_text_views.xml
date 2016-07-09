@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    >
+
+    <TextView
+        android:id="@+id/widget_competition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:textColor="@color/widgetText"
+        android:textSize="14sp"
+        />
+
+    <TextView
+        android:id="@+id/time_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/widget_competition"
+        android:padding="4dp"
+        android:textColor="@color/widgetText"
+        android:textSize="12sp"
+        />
+
+
+    <TextView
+        android:id="@+id/speed_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_widget"
+        android:padding="4dp"
+        android:paddingTop="24dp"
+        android:textColor="@color/widgetText"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/top_three_time_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/widget_competition"
+        android:layout_centerHorizontal="true"
+        android:padding="4dp"
+        android:textColor="@color/widgetText"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/top_three_speed_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_three_time_widget"
+        android:layout_centerHorizontal="true"
+        android:padding="4dp"
+        android:textColor="@color/widgetText"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/difference_time_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/widget_competition"
+        android:padding="4dp"
+        android:textColor="@color/widgetText"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:id="@+id/difference_speed_widget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/difference_time_widget"
+        android:padding="4dp"
+        android:textColor="@color/widgetText"
+        android:textSize="12sp"
+        />
+
+</RelativeLayout>
+
+
+
+
+
