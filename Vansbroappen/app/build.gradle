@@ -6,7 +6,7 @@ android {
         config {
             keyAlias 'douengKey'
             keyPassword 'jagsittermedettsignedAPK99'
-            storeFile file('C:/Users/douglas/AndroidStudioProjects/Vansbroappen/keystore.jks')
+            storeFile file('config/keystore.jks')
             storePassword 'jagsittermedettsignedAPK99'
         }
     }
