@@ -40,7 +40,7 @@ public class AnalyticsApplication extends Application {
             // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
             analytics = GoogleAnalytics.getInstance(this);
             analytics.setLocalDispatchPeriod(1800);
-            tracker = analytics.newTracker("UA-80340924-1");
+            tracker = analytics.newTracker(R.xml.app_tracker);
             tracker.enableExceptionReporting(true);
             tracker.enableAdvertisingIdCollection(true);
             tracker.enableAutoActivityTracking(true);

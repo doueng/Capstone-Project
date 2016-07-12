@@ -29,6 +29,8 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
+import java.util.ArrayList;
+
 /**
  * Created by douglas on 03/06/2016.
  */
@@ -65,7 +67,7 @@ public class SearchFragment extends Fragment implements AsyncResponse {
         adView.loadAd(adRequest);
 
         EditText editText = (EditText) rootView.findViewById(R.id.edit_text_main);
-        editText.setText("johan hansson");
+        editText.setText("sven kihlgren");
 
         editText.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
@@ -129,8 +131,6 @@ public class SearchFragment extends Fragment implements AsyncResponse {
                 CompetitionFragment fragment = new CompetitionFragment();
                 fragment.setArguments(bundle);
 
-                cursor.close();
-
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.container, fragment)
                         .addToBackStack(null)
@@ -143,10 +143,21 @@ public class SearchFragment extends Fragment implements AsyncResponse {
     public void processFinish(Cursor cursor) {
 
         if (cursor != null) {
+            final ArrayList<String> competitions = new ArrayList<>();
+            final ArrayList<String> positions = new ArrayList<>();
+            final ArrayList<String> speedDifferences = new ArrayList<>();
+
+            while (cursor.moveToNext()) {
+                competitions.add(cursor.getString(LoaderUtility.Query.COMPETITION));
+                positions.add(cursor.getString(LoaderUtility.Query.POSITION));
+                speedDifferences.add(cursor.getDouble(LoaderUtility.Query.SPEED_DIFFERENCE) + "");
+            }
+
+            cursor.moveToFirst();
+
             this.statsAdapter = new StatsAdapter(getContext(), cursor, 0);
             this.listView.setAdapter(this.statsAdapter);
             final String name = cursor.getString(LoaderUtility.Query.NAME);
-
 
             addToWidget.setVisibility(View.VISIBLE);
             addToWidget.setOnClickListener(new View.OnClickListener() {
@@ -164,7 +175,10 @@ public class SearchFragment extends Fragment implements AsyncResponse {
                 @Override
                 public void onClick(View view) {
                     Bundle bundle = new Bundle();
-                    bundle.putString("name", name);
+//                    bundle.putString("name", name);
+                    bundle.putStringArrayList("competitions", competitions);
+                    bundle.putStringArrayList("positions", positions);
+                    bundle.putStringArrayList("speedDifferences", speedDifferences);
 
                     OverviewFragment fragment = new OverviewFragment();
                     fragment.setArguments(bundle);

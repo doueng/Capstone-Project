@@ -21,13 +21,6 @@ import java.util.ArrayList;
  */
 public class WidgetProvider extends AppWidgetProvider {
 
-
-    @Override
-    public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
-//        onReceive(context, new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE)
-//                .putExtra("name", "miemois, carl"));
-    }
-
     @Override
     public void onReceive(Context context, Intent intent) {
         super.onReceive(context, intent);
@@ -74,7 +67,7 @@ public class WidgetProvider extends AppWidgetProvider {
             for (int appWidgetId : appWidgetIds) {
                 RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.widget);
                 remoteViews.removeAllViews(R.id.widget_container);
-                for (int i=0; i<competitions.size()-1; i++) {
+                for (int i = 0; i < competitions.size() - 1; i++) {
                     RemoteViews widgetTextViews = new RemoteViews(context.getPackageName(), R.layout.widget_text_views);
                     widgetTextViews.setTextViewText(R.id.widget_competition, competitions.get(i));
                     widgetTextViews.setTextViewText(R.id.time_widget, times.get(i));
