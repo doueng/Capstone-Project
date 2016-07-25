@@ -1,4 +1,4 @@
-# Capstone-Project
+# Capstone Project
 
 Vansbrosimningen is a yearly open air swimming competition. Because it’s held outdoors the swimming
 conditions can vary very much from year to year. With Vansbroappen you can analyse your
